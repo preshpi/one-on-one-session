@@ -37,13 +37,17 @@ function App() {
 
         <p>
           send your receipt to my email
-          <a
-            href="mailto:ijeomaegwuenu22@gmail.com"
-            className="font-bold underline"
-          >
-            {" "}
-            here
-          </a>
+          <button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="mailto:ijeomaegwuenu22@gmail.com"
+              className="font-bold underline"
+            >
+              {" "}
+              here
+            </a>
+          </button>
         </p>
       </section>
 
