@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Switzer", sans-serif;
+}
+
+body {
+  background-color: #dadaef;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #495b7f, #5c729e, #394865);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.box {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+
+/* --text: #fcfcfd;
+--background: #07090d;
+--primary: #33405b;
+--secondary: #161b27;
+--accent: #6278a7; */
