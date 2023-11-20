@@ -6,11 +6,11 @@
 }
 
 body {
-  background-color: #dadaef;
+  background-color: #17171f;
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #495b7f, #5c729e, #394865);
+.gradient {
+  background: linear-gradient(90deg, rgb(211, 112, 209), #ad2988, rgb(232, 13, 181));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
