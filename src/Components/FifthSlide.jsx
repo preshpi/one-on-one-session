@@ -1,6 +1,6 @@
 const FifthSlide = () => {
   return (
-    <main className="h-screen flex items-center justify-center text-2xl text-white flex-col gap-5">
+    <main className="h-screen flex items-center justify-center text-2xl text-white flex-col gap-5 px-5">
       <h5 className="lg:text-5xl text-3xl font-semibold text-center">
         {" "}
         Make Your Payment <span className="gradient">Bestie</span>

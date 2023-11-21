@@ -19,27 +19,27 @@ function App() {
     setSlides((prevSlide) => (prevSlide - 1) % totalSlide);
   };
   return (
-    <div>
-      <section className="relative items-center justify-center flex z-20">
+    <div className="relative">
+      <section className="relative items-center justify-center flex">
         {slides === 0 && <FirstSlide />}
         {slides === 1 && <SecondSlide />}
         {slides === 2 && <ThirdSlide />}
-        {slides === 3 && <FourthSlide />}
-        {slides === 4 && <FifthSlide />}
+        {slides === 3 && <FifthSlide />}
+        {slides === 4 && <FourthSlide />}
         {slides === 5 && <SisxthSlide />}
       </section>
-      <footer className="text-white  flex  items-center justify-center p-5 absolute bottom-0 w-full">
+      <footer className="text-white flex items-center justify-center p-5 bottom-0 absolute w-full">
         <div className="flex items-center justify-center gap-5">
           <button
             onClick={prevSlide}
             disabled={slides === 0}
-            className={`bg-black opacity-90 rounded-lg px-6 py-2 hover:opacity-50 transistion-all duration-300 shadow-md text-white ${
+            className={`bg-black  rounded-lg px-6 py-2 hover:opacity-50 transistion-all duration-300 shadow-md text-white ${
               slides === 0 ? "cursor-not-allowed" : ""
             }`}
           >
             prev
           </button>
-          <span className="text-xl font-semibold">
+          <span className="text-xl font-semibold text-white">
             {" "}
             {slides + 1} / {totalSlide}
           </span>
