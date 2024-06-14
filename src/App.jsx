@@ -6,18 +6,26 @@ import ThirdSlide from "./Components/ThirdSlide";
 import FourthSlide from "./Components/FourthSlide";
 import FifthSlide from "./Components/FifthSlide";
 import SisxthSlide from "./Components/SisxthSlide";
+import SendAnEmail from "./Components/SendAnEmail";
 
 function App() {
-  const [slides, setSlides] = useState(0);
-  const totalSlide = 6;
+  const [slides, setSlides] = useState(() =>
+    parseInt(localStorage.getItem("currentSlide") || "0", 10)
+  );
+  const totalSlide = 7;
 
   const nextSlide = () => {
-    setSlides((prevSlide) => (prevSlide + 1) % totalSlide);
+    const nextIndex = (slides + 1) % totalSlide;
+    setSlides(nextIndex);
+    localStorage.setItem("currentSlide", nextIndex.toString());
   };
 
   const prevSlide = () => {
-    setSlides((prevSlide) => (prevSlide - 1) % totalSlide);
+    const prevIndex = (slides - 1 + totalSlide) % totalSlide;
+    setSlides(prevIndex);
+    localStorage.setItem("currentSlide", prevIndex.toString());
   };
+
   return (
     <div className="relative">
       <section className="relative items-center justify-center flex">
@@ -26,7 +34,8 @@ function App() {
         {slides === 2 && <ThirdSlide />}
         {slides === 3 && <FifthSlide />}
         {slides === 4 && <FourthSlide />}
-        {slides === 5 && <SisxthSlide />}
+        {slides === 5 && <SendAnEmail />}
+        {slides === 6 && <SisxthSlide />}
       </section>
       <footer className="text-white flex items-center justify-center p-5 bottom-0 absolute w-full">
         <div className="flex items-center justify-center gap-5">
@@ -46,7 +55,7 @@ function App() {
           <button
             disabled={slides === totalSlide - 1}
             onClick={nextSlide}
-            className={`bg-black opacity-90 rounded-lg px-6 py-2 hover:opacity-50 transistion-all duration-300 shadow-md text-white ${
+            className={`bg-black opacity-90 rounded-lg px-6 py-2 hover:opacity-50 disabled:hover:opacity-100 transistion-all duration-300 shadow-md text-white ${
               slides === totalSlide - 1 ? "cursor-not-allowed" : ""
             }`}
           >

@@ -7,8 +7,11 @@ const ThirdSlide = () => {
 
       <ul className="gap-5 flex itens-center justify-center flex-col px-6 text-base list-outside list-disc ml-6 max-w-[500px]">
         <li>
-          <span className="font-semibold">Each session lasts 45 mins </span>
-          and you can achieve a lot.
+          <p className="font-semibold">
+            Each session lasts{" "}
+            <span className="font-bold gradient">1 hour</span> and you can
+            achieve a lot.
+          </p>
         </li>
         <li>
           Be mindful of the time and be open minded about the feedback
