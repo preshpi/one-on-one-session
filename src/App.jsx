@@ -37,7 +37,7 @@ function App() {
         {slides === 5 && <SendAnEmail />}
         {slides === 6 && <SisxthSlide />}
       </section>
-      <footer className="text-white flex items-center justify-center p-5 bottom-0 absolute w-full">
+      <footer className="text-white flex items-center justify-center lg:p-10 pb-20 bottom-0 absolute w-full">
         <div className="flex items-center justify-center gap-5">
           <button
             onClick={prevSlide}
