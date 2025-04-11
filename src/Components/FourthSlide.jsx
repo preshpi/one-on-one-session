@@ -4,11 +4,13 @@ const FourthSlide = () => {
       <h1 className="lg:text-5xl text-3xl font-semibold text-center">
         Book your <span className="gradient">session!</span>
       </h1>
-      <p className="text-base text-white italic text-center">Make sure to make your payment before you book</p>
+      <p className="text-base text-white italic text-center">
+        Make sure to make your payment before you book
+      </p>
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://calendar.app.google/ZPXKsVuP31erRXhJ9"
+        href="https://calendar.app.google/91pQTF7KQUqot6Em6"
       >
         <button className="bg-[#392c73] hover:opacity-70 rounded-lg shadow-md text-white px-12 text-2xl py-4">
           Book a call
